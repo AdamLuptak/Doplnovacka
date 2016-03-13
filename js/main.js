@@ -8,7 +8,7 @@ var counter = 0;
  */
 function unCheckAllCheckBoxes(trueCheckbox) {
 	$('#checkboxes > a > input').each(function() {
-			if ($(this).attr('value') != trueCheckbox && !($(this).prop('disabled'))) {
+		if ($(this).attr('value') != trueCheckbox && !($(this).prop('disabled'))) {
 			$(this)[0].checked = false;
 		}
 	});
@@ -36,35 +36,35 @@ $(document).ready(function() {
 			} else {
 				audioFail.play();
 			}
-		   
+
 		});
 	})
 });
 
 var ListWithAnswears = [{
+	id: 5,
+	lable: 'Pečeň',
+	ans: 'E'
+}, {
+	id: 2,
+	lable: 'Pľúca',
+	ans: 'B'
+}, {
+	id: 6,
+	lable: 'Črevá',
+	ans: 'F'
+}, {
+	id: 4,
+	lable: 'Žalúdok',
+	ans: 'D'
+}, {
 	id: 1,
 	lable: 'Mozog',
 	ans: 'A'
 }, {
-	id: 2,
-	lable: 'Pluca',
-	ans: 'B'
-}, {
 	id: 3,
 	lable: 'Srdce',
 	ans: 'C'
-}, {
-	id: 4,
-	lable: 'Zaludok',
-	ans: 'D'
-}, {
-	id: 5,
-	lable: 'Pecen',
-	ans: 'E'
-}, {
-	id: 6,
-	lable: 'Creva',
-	ans: 'F'
 }];
 
 /**
@@ -72,7 +72,7 @@ var ListWithAnswears = [{
  */
 function prepareList(list) {
 	for (var i = 0; i < list.length; i++) {
-		$("#moznosti").append("<div class'row text-center'><button style='margin-top:10px; margin-bottom:10px' value=" + list[i].ans + " type='button' class='btn btn-primary  btn-block'>" + list[i].lable + "</button></div> ");
+		$("#moznosti").append("<div class'row text-center'><button style='margin-top:10px; margin-bottom:10px; height:70px; font-size: 200%;' value=" + list[i].ans + " type='button' class='btn btn-primary  btn-block'>" + list[i].lable + "</button></div> ");
 	};
 }
 
